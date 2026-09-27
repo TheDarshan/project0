@@ -1,31 +1,21 @@
-/* ==========================================================================
-   style.css — Multi-Page Dark Editorial Portfolio (Darshan)
-   Shared across welcome.html (Hero Page) and index.html (Portfolio Page)
-   Plain CSS3 | Responsive (375px+) | Accessible Focus & Reduced Motion
-   ========================================================================== */
-
 :root {
-  /* Warm Architectural Dark Palette */
+  
   --bg-canvas: #111110;
   --bg-surface: #161614;
   --bg-elevated: #1c1c1a;
   --bg-placeholder: #181816;
-
   --text-primary: #f5f3ef;
   --text-on-primary: #111110;
   --text-body: #d6d3cd;
   --text-secondary: #a8a49c;
   --text-muted: #7d7971;
-
   --border-subtle: #2c2b28;
   --border-strong: #45433e;
-  --border-active: #f5f3ef;
-
-  /* Typography */
+  --border-active: #f5f3ef;  
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Spacing & Layout */
+  
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -35,10 +25,6 @@
   --space-2xl: 6rem;
   --container-max: 1120px;
 }
-
-/* --------------------------------------------------------------------------
-   Reset & Base
-   -------------------------------------------------------------------------- */
 
 *,
 *::before,
@@ -55,8 +41,6 @@ html {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -83,27 +67,19 @@ ul {
   list-style: none;
 }
 
-/* --------------------------------------------------------------------------
-   Keyboard Focus States (WCAG Visible Focus)
-   -------------------------------------------------------------------------- */
-
-a:focus-visible,
-button:focus-visible,
-label:focus-visible,
-input:focus-visible,
-[tabindex]:focus-visible {
+a:focus,
+button:focus,
+label:focus,
+input:focus,
+[tabindex]:focus {
   outline: 2px solid var(--text-primary);
   outline-offset: 4px;
 }
 
-.filter-radio:focus-visible ~ .section-header .filter-tabs {
+.filter-radio:focus ~ .section-header .filter-tabs {
   outline: 2px solid var(--text-primary);
   outline-offset: 4px;
 }
-
-/* --------------------------------------------------------------------------
-   Page 1: Hero / Welcome Page (welcome.html)
-   -------------------------------------------------------------------------- */
 
 .hero-main {
   flex: 1;
@@ -123,6 +99,14 @@ input:focus-visible,
 @media (min-width: 768px) {
   .hero {
     padding: 6rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 4.25rem;
+  }
+
+  .hero-bio {
+    font-size: 1.25rem;
   }
 }
 
@@ -152,7 +136,7 @@ input:focus-visible,
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.025em;
@@ -161,7 +145,7 @@ input:focus-visible,
 
 .hero-bio {
   font-family: var(--font-sans);
-  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  font-size: 1.0625rem;
   font-weight: 400;
   line-height: 1.65;
   color: var(--text-body);
@@ -236,23 +220,17 @@ input:focus-visible,
   color: var(--text-primary);
 }
 
-.hero-cta:focus-visible {
+.hero-cta:focus {
   outline: 2px solid var(--text-primary);
   outline-offset: 4px;
 }
-
-/* --------------------------------------------------------------------------
-   Page 2: Portfolio Page (index.html) — Header, About, Projects, Footer
-   -------------------------------------------------------------------------- */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
   width: 100%;
-  background-color: rgba(17, 17, 16, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--bg-canvas);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -331,7 +309,6 @@ input:focus-visible,
   flex-shrink: 0;
 }
 
-/* Main Content Container */
 .portfolio-main {
   flex: 1;
   width: 100%;
@@ -372,17 +349,16 @@ input:focus-visible,
   color: var(--text-muted);
 }
 
-/* About Section */
 .about-layout {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-lg);
-  align-items: start;
 }
 
 @media (min-width: 1024px) {
   .about-layout {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    flex-direction: row;
+    align-items: flex-start;
     gap: var(--space-xl);
   }
 }
@@ -395,7 +371,7 @@ input:focus-visible,
 
 @media (min-width: 1024px) {
   .portrait-card {
-    grid-column: span 5;
+    width: 42%;
   }
 }
 
@@ -433,13 +409,19 @@ input:focus-visible,
 }
 
 .media-placeholder--square {
-  aspect-ratio: 1 / 1;
+  height: 280px;
 }
 
 .media-placeholder--video {
-  aspect-ratio: 16 / 9;
+  height: 200px;
   border: 0;
   border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+  .media-placeholder--video {
+    height: 300px;
+  }
 }
 
 .placeholder-caption {
@@ -448,7 +430,7 @@ input:focus-visible,
   color: var(--text-muted);
   padding: var(--space-xs) var(--space-sm);
   border: 1px dashed var(--border-strong);
-  background-color: rgba(17, 17, 16, 0.8);
+  background-color: var(--bg-canvas);
 }
 
 .about-content {
@@ -459,7 +441,7 @@ input:focus-visible,
 
 @media (min-width: 1024px) {
   .about-content {
-    grid-column: span 7;
+    width: 58%;
   }
 }
 
@@ -477,11 +459,17 @@ input:focus-visible,
 
 .display-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.025em;
   color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .display-title {
+    font-size: 3.25rem;
+  }
 }
 
 .bio-paragraphs {
@@ -526,7 +514,6 @@ input:focus-visible,
   color: var(--text-primary);
 }
 
-/* Selected Works Section */
 .filter-radio {
   position: absolute;
   width: 1px;
@@ -606,14 +593,19 @@ input:focus-visible,
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-lg);
 }
 
 @media (min-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    width: calc(50% - var(--space-lg) / 2);
   }
 }
 
@@ -698,10 +690,6 @@ input:focus-visible,
   text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
-   Footer & Contact Buttons
-   -------------------------------------------------------------------------- */
-
 .site-footer {
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
@@ -731,6 +719,10 @@ input:focus-visible,
     align-items: flex-end;
     padding: var(--space-xl);
   }
+
+  .footer-contact-title {
+    font-size: 2.5rem;
+  }
 }
 
 .footer-contact-header {
@@ -742,7 +734,7 @@ input:focus-visible,
 
 .footer-contact-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -850,10 +842,6 @@ input:focus-visible,
 .footer-nav a:hover {
   color: var(--text-primary);
 }
-
-/* --------------------------------------------------------------------------
-   Reduced Motion Preference
-   -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
   html {
