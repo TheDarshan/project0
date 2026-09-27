@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darshan — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Darshan, a computer science student at Scaler and freelance web developer running devbydarshan in Bangalore, India."
+    />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="brand-mark" href="welcome.html">Darshan</a>
+
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="welcome.html">Intro</a></li>
+            <li><a href="#about" aria-current="true">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-status">
+          <p class="availability-label">
+            <span class="status-indicator" aria-hidden="true"></span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    
+    <main class="portfolio-main">
+
+      <section class="page-section" id="about" aria-labelledby="about-heading">
+        <header class="section-index">
+          <span>About</span>
+          <span>Bangalore, India</span>
+        </header>
+
+        <div class="about-layout">
+
+          <figure class="portrait-card">
+            <div class="portrait-card-header">
+              <span>Portrait</span>
+              <span>Monochrome</span>
+            </div>
+
+            <div class="media-placeholder media-placeholder--square">
+              <img src="IMG_8036.jpg" alt="Darshan" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+              
+            </div>
+
+            <figcaption class="portrait-card-footer">
+              <span>Bangalore, India</span>
+              <span>devbydarshan</span>
+            </figcaption>
+          </figure>
+
+          <div class="about-content">
+            <header class="about-heading-group">
+              <p class="role-kicker">
+                Computer science student at Scaler, freelance web developer
+              </p>
+              <h1 class="display-title" id="about-heading">Darshan</h1>
+            </header>
+
+            <div class="bio-paragraphs">
+              <p class="bio-lead">
+                I'm a CS student building small web projects while learning what
+                it actually takes to ship something real. I run devbydarshan, a
+                freelance practice doing web development and SEO work.
+              </p>
+            </div>
+
+            <section class="skills-container" aria-labelledby="skills-heading">
+              <h2 class="skills-heading" id="skills-heading">
+                Skills &amp; Tags
+              </h2>
+              <ul class="tag-list">
+                <li class="tag-badge">HTML &amp; CSS</li>
+                <li class="tag-badge">Web Development</li>
+                <li class="tag-badge">SEO</li>
+                <li class="tag-badge">Freelancing</li>
+                <li class="tag-badge">Bangalore, India</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="page-section" id="projects" aria-labelledby="projects-heading">
+
+        <input
+          type="radio"
+          name="work-filter"
+          id="tab-all"
+          class="filter-radio"
+          checked
+        />
+        <input
+          type="radio"
+          name="work-filter"
+          id="tab-web"
+          class="filter-radio"
+        />
+        <input
+          type="radio"
+          name="work-filter"
+          id="tab-tools"
+          class="filter-radio"
+        />
+
+        <header class="section-header">
+          <div class="section-title-group">
+            <p class="role-kicker">Portfolio</p>
+            <h2 class="display-title" id="projects-heading">Selected Works</h2>
+          </div>
+
+          <div class="filter-tabs" role="group" aria-label="Filter projects by category">
+            <label for="tab-all" class="filter-tab">All</label>
+            <label for="tab-web" class="filter-tab">Web</label>
+            <label for="tab-tools" class="filter-tab">Tools &amp; Systems</label>
+          </div>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card" data-category="web">
+            <div>
+              <figure class="media-placeholder media-placeholder--video">
+                <img src="Screenshot 2026-09-27 210651.png" alt="devbydarshan" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+                
+              </figure>
+
+              <div class="project-body">
+                <header class="project-title-row">
+                  <h3 class="project-title">devbydarshan</h3>
+                  <span class="role-kicker">Freelance</span>
+                </header>
+
+                <p class="project-description">
+                  Personal freelance brand and site for web development and SEO
+                  work, built and deployed independently.
+                </p>
+
+                <ul class="project-tags" aria-label="Project tags">
+                  <li class="project-tag">HTML &amp; CSS</li>
+                  <li class="project-tag">Web Development</li>
+                  <li class="project-tag">SEO</li>
+                  <li class="project-tag">Freelancing</li>
+                </ul>
+              </div>
+            </div>
+
+            <footer class="project-footer">
+              <span class="project-type">Web &amp; SEO</span>
+              <a class="project-link" href="#projects">View Project &rarr;</a>
+            </footer>
+          </article>
+
+          
+          <article class="project-card" data-category="tools">
+            <div>
+              <figure class="media-placeholder media-placeholder--video">
+                <img src="Screenshot 2026-09-27 210855.png" alt="Management-system"style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+              </figure>
+
+              <div class="project-body">
+                <header class="project-title-row">
+                  <h3 class="project-title">Management-sys</h3>
+                  <span class="role-kicker">Application</span>
+                </header>
+
+                <p class="project-description">
+                  A gym focused membership management system.
+                </p>
+
+                <ul class="project-tags" aria-label="Project tags">
+                  <li class="project-tag">Web Development</li>
+                  <li class="project-tag">CRUD Logic</li>
+                  <li class="project-tag">Data Handling</li>
+                </ul>
+              </div>
+            </div>
+
+            <footer class="project-footer">
+              <span class="project-type">Full Stack</span>
+              <a class="project-link" href="https://management-sy.vercel.app/">View Project &rarr;</a>
+            </footer>
+          </article>
+
+          <article class="project-card" data-category="tools">
+            <div>
+              <figure class="media-placeholder media-placeholder--video">
+                <img src="Screenshot 2026-09-27 211231.png" alt="THE75HARD" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+              </figure>
+
+              <div class="project-body">
+                <header class="project-title-row">
+                  <h3 class="project-title">75 Hard Tracker</h3>
+                  <span class="role-kicker">Tracker</span>
+                </header>
+
+                <p class="project-description">
+                  A habit and discipline tracker built to log a personal 75-day
+                  self-improvement challenge (streaks, notes, daily check-ins).
+                </p>
+
+                <ul class="project-tags" aria-label="Project tags">
+                  <li class="project-tag">HTML &amp; CSS</li>
+                  <li class="project-tag">Habit Tracking</li>
+                  <li class="project-tag">Daily Check-ins</li>
+                </ul>
+              </div>
+            </div>
+
+            <footer class="project-footer">
+              <span class="project-type">Habit &amp; Discipline</span>
+              <a class="project-link" href="https://the75hardchallenge007.vercel.app/">View Project &rarr;</a>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer" id="contact">
+      <div class="footer-contact-section">
+        <div class="footer-contact-header">
+          <p class="role-kicker">Contact</p>
+          <h2 class="footer-contact-title">Let's work together.</h2>
+          <p class="footer-contact-subtitle">
+            Available for freelance web development, SEO projects, and collaborations.
+          </p>
+        </div>
+
+        <ul class="contact-buttons" aria-label="Contact and social links">
+          <li>
+            <a
+              class="contact-btn contact-btn--primary"
+              href="mailto:bansaldarshan07@gmail.com"
+            >
+              Email Me &rarr;
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact-btn"
+              href="https://www.instagram.com/darshannbansal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram &#8599;
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact-btn"
+              href="https://www.linkedin.com/in/darshan-bansal-a04167253/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn &#8599;
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact-btn"
+              href="https://github.com/TheDarshan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub &#8599;
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-container">
+        <p class="footer-copy">Darshan &mdash; devbydarshan</p>
+
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="welcome.html">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="mailto:bansaldarshan07@gmail.com">Email</a></li>
+          </ul>
+        </nav>
+
+        <p class="footer-location">Bangalore, India</p>
+      </div>
+    </footer>
+  </body>
+</html>
