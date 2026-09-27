@@ -3,20 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Darshan — Portfolio (About &amp; Selected Works)</title>
+    <meta http-equiv="refresh" content="0; url=welcome.html" />
+    <title>Darshan — Portfolio</title>
     <meta
       name="description"
       content="Portfolio of Darshan, a computer science student at Scaler and freelance web developer running devbydarshan in Bangalore, India."
     />
-    <meta property="og:title" content="Darshan — CS Student &amp; Freelance Web Developer" />
-    <meta
-      property="og:description"
-      content="Portfolio of Darshan, a computer science student at Scaler and freelance web developer running devbydarshan in Bangalore, India."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Typography: Playfair Display & Inter -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +21,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- STICKY TOP NAVIGATION -->
+    
     <header class="site-header">
       <div class="nav-container">
         <a class="brand-mark" href="welcome.html">Darshan</a>
@@ -44,15 +38,14 @@
         <div class="nav-status">
           <p class="availability-label">
             <span class="status-indicator" aria-hidden="true"></span>
-            <span>Available for freelance</span>
           </p>
         </div>
       </div>
     </header>
 
-    <!-- MAIN CONTENT (ABOUT & PROJECTS) -->
+    
     <main class="portfolio-main">
-      <!-- ABOUT SECTION -->
+
       <section class="page-section" id="about" aria-labelledby="about-heading">
         <header class="section-index">
           <span>About</span>
@@ -60,7 +53,7 @@
         </header>
 
         <div class="about-layout">
-          <!-- Left Column: Portrait Placeholder Frame -->
+
           <figure class="portrait-card">
             <div class="portrait-card-header">
               <span>Portrait</span>
@@ -68,7 +61,7 @@
             </div>
 
             <div class="media-placeholder media-placeholder--square">
-              <!-- replace with photo -->
+              <img src="IMG_8036.jpg" alt="Darshan">
               <span class="placeholder-caption">Portrait Placeholder</span>
             </div>
 
@@ -78,7 +71,6 @@
             </figcaption>
           </figure>
 
-          <!-- Right Column: Editorial Heading, Bio & Skills -->
           <div class="about-content">
             <header class="about-heading-group">
               <p class="role-kicker">
@@ -111,9 +103,9 @@
         </div>
       </section>
 
-      <!-- SELECTED WORKS SECTION -->
+
       <section class="page-section" id="projects" aria-labelledby="projects-heading">
-        <!-- Accessible CSS-Only Filter Controls -->
+
         <input
           type="radio"
           name="work-filter"
@@ -148,11 +140,11 @@
         </header>
 
         <div class="projects-grid">
-          <!-- Project 1: devbydarshan -->
+
           <article class="project-card" data-category="web">
             <div>
               <figure class="media-placeholder media-placeholder--video">
-                <!-- replace with photo -->
+                <img src="Screenshot 2026-09-27 210651.png" alt="devbydarshan">
                 <figcaption class="placeholder-caption">Project Preview Placeholder</figcaption>
               </figure>
 
@@ -182,23 +174,22 @@
             </footer>
           </article>
 
-          <!-- Project 2: Management-sys (Paisa) -->
+          
           <article class="project-card" data-category="tools">
             <div>
               <figure class="media-placeholder media-placeholder--video">
-                <!-- replace with photo -->
+                <img src="Screenshot 2026-09-27 210855.png" alt="Management-system"
                 <figcaption class="placeholder-caption">Project Preview Placeholder</figcaption>
               </figure>
 
               <div class="project-body">
                 <header class="project-title-row">
-                  <h3 class="project-title">Management-sys (Paisa)</h3>
+                  <h3 class="project-title">Management-sys</h3>
                   <span class="role-kicker">Application</span>
                 </header>
 
                 <p class="project-description">
-                  A personal finance / expense-tracking system built to practice
-                  structured data handling and CRUD logic.
+                  A gym focused membership management system.
                 </p>
 
                 <ul class="project-tags" aria-label="Project tags">
@@ -210,16 +201,15 @@
             </div>
 
             <footer class="project-footer">
-              <span class="project-type">Personal Finance</span>
-              <a class="project-link" href="#projects">View Project &rarr;</a>
+              <span class="project-type">Full Stack</span>
+              <a class="project-link" href="https://management-sy.vercel.app/">View Project &rarr;</a>
             </footer>
           </article>
 
-          <!-- Project 3: 75 Hard Tracker -->
           <article class="project-card" data-category="tools">
             <div>
               <figure class="media-placeholder media-placeholder--video">
-                <!-- replace with photo -->
+                <img src="Screenshot 2026-09-27 211231.png" alt="THE75HARD"
                 <figcaption class="placeholder-caption">Project Preview Placeholder</figcaption>
               </figure>
 
@@ -244,14 +234,14 @@
 
             <footer class="project-footer">
               <span class="project-type">Habit &amp; Discipline</span>
-              <a class="project-link" href="#projects">View Project &rarr;</a>
+              <a class="project-link" href="https://the75hardchallenge007.vercel.app/">View Project &rarr;</a>
             </footer>
           </article>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER WITH CONTACT ME BUTTONS -->
+    
     <footer class="site-footer" id="contact">
       <div class="footer-contact-section">
         <div class="footer-contact-header">
@@ -274,7 +264,7 @@
           <li>
             <a
               class="contact-btn"
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/darshannbansal"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -284,7 +274,7 @@
           <li>
             <a
               class="contact-btn"
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/darshan-bansal-a04167253/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -294,7 +284,7 @@
           <li>
             <a
               class="contact-btn"
-              href="https://github.com/"
+              href="https://github.com/TheDarshan"
               target="_blank"
               rel="noopener noreferrer"
             >
